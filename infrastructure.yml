@@ -19,9 +19,17 @@ Resources:
     Properties:
       BucketName: !Sub 'myapp-assets-${Environment}-${AWS::AccountId}'
 
+  LogsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub 'myapp-logs-${Environment}-${AWS::AccountId}'
+
 Outputs:
   BucketName:
     Value: !Ref WebsiteBucket
 
   AssetsBucketName:
     Value: !Ref AssetsBucket
+    
+  LogsBucketName:
+    Value: !Ref LogsBucket
