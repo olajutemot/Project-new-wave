@@ -10,7 +10,7 @@ Resources:
   WebsiteBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub 'myapp-website-${Environment}-${AWS::AccountId}'
+      BucketName: !Sub 'myapp-website-${Environment}-${AWS::AccountId}
       WebsiteConfiguration:
         IndexDocument: index.html
 
@@ -30,6 +30,6 @@ Outputs:
 
   AssetsBucketName:
     Value: !Ref AssetsBucket
-    
+
   LogsBucketName:
     Value: !Ref LogsBucket
