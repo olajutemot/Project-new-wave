@@ -7,7 +7,9 @@
     "test": "jest",
     "test:smoke": "node smoke-test.js",
     "test:coverage": "jest --coverage --coverageThreshold='{\"global\":{\"lines\":60,\"statements\":60,\"functions\":20,\"branches\":20}}'",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "rm -rf build && mkdir -p build && cp server.js appconfig.js package.json package-lock.json smoke-test.js build/ && cp -r public scripts build/",
+    "lint": "echo No lint configured"
   },
   "keywords": [],
   "author": "",
